@@ -29,26 +29,14 @@ public class Main {
 
             case "Soal2":
                 if (sc.hasNext()) {
-                    // Baca string asli dari input
                     String s1 = sc.next();
-                    String s2 = sc.next();
-
-                    // Parse ke float
+                    String s2 = sc.next();//membaca angka dalam bentuk string
                     float f1 = Float.parseFloat(s1);
-                    float f2 = Float.parseFloat(s2);
-
-                    // Parse ke double (dari string yang sama)
+                    float f2 = Float.parseFloat(s2);//mengubah ke float
                     double d1 = Double.parseDouble(s1);
-                    double d2 = Double.parseDouble(s2);
-
-                    // Jumlahkan masing-masing
-                    float sumFloat = f1 + f2;
-                    double sumDouble = d1 + d2;
-
-                    // Hitung selisih absolut
-                    double diff = Math.abs(sumFloat - sumDouble);
-
-                    // Cetak 6 digit di belakang koma
+                    double d2 = Double.parseDouble(s2);//mengubah ke double
+                    
+                    double diff = Math.abs((f1 + f2) - (d1 + d2));//menghitung hasil penjumlahan float dan double 
                     System.out.printf("%.6f%n", diff);
                 }
                 break;
@@ -83,7 +71,7 @@ public class Main {
                     double valDouble = Double.parseDouble(sc.next());
                     boolean valBool = Boolean.parseBoolean(sc.next());
                     //mengubah input string
-
+                    
                     double hasil = valInt * valDouble;
                     if (!valBool) {
                         hasil = hasil * -1;//jika bololean false, hasil di buat negatif
